@@ -1,0 +1,21 @@
+{
+  "name": "jsaqa-hw-7.2.puppeteer-2",
+  "version": "1.0.0",
+  "description": "Homework for Puppeteer & Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "cucumber": "cucumber-js"
+  },
+  "author": "SIV",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "jest": "^27.5.1",
+    "jest-puppeteer": "^6.1.0",
+    "puppeteer": "^13.4.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.2"
+  }
+}
