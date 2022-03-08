@@ -17,7 +17,7 @@ describe("Ticket booking tests", () => {
     page.setDefaultNavigationTimeout(0);
   });
   
-  test.only("Should successfully book one ticket", async () => {
+  test("Should successfully book one ticket", async () => {
     await clickElement(page, day);
     await clickElement(page, time);
     await clickElement(page, ".buying-scheme__wrapper > div:nth-child(5) > span:nth-child(2)");

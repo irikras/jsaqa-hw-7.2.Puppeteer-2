@@ -4,7 +4,7 @@ Feature: Booking tickets
         When user choose day
         When user choose time
         When user select 5 row 2 seat
-        When user choose the booked place
+        When user click button
         When user click get reservation code
         Then user received an electronic ticket "Электронный билет"
 
@@ -14,7 +14,7 @@ Feature: Booking tickets
         When user choose time
         When user select 5 row 6 seat
         When user select 5 row 7 seat
-        When user choose the booked place
+        When user click button
         When user click get reservation code
         Then user received an electronic ticket "Электронный билет"
 
@@ -23,4 +23,4 @@ Feature: Booking tickets
         When user choose day
         When user choose time
         When user choose the booked place
-        Then user see button disabled "true"
+        Then user sees button disabled "true"

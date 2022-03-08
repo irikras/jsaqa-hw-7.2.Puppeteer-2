@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
-const expect = require("chai");
+const chai = require("chai");
+const expect = chai.expect;
 const { Given, When, Then, Before, After } = require("@cucumber/cucumber");
 const { clickElement, getText } = require("../../lib/commands.js");
 const { setDefaultTimeout } = require("@cucumber/cucumber");
@@ -60,13 +61,14 @@ When("user click button", async function () {
 When("user click get reservation code", async function () {
   return await clickElement(this.page, "button.acceptin-button");
 });
+
 Then("user received an electronic ticket {string}", async function (string) {
   const actual = await getText(this.page, "h2.ticket__check-title");
   const expected = await string;
   expect(actual).contains(expected);
 });
 
-Then("user see button disabled {string}", async function (string) {
+Then("user sees button disabled {string}", async function (string) {
   const actual = String(
     await this.page.$eval("button", (button) => {
       return button.disabled;
